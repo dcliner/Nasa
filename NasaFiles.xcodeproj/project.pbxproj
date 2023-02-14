@@ -13,6 +13,11 @@
 		B93701272965D46400542228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93701252965D46400542228 /* Main.storyboard */; };
 		B93701292965D46700542228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93701282965D46700542228 /* Assets.xcassets */; };
 		B937012C2965D46700542228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B937012A2965D46700542228 /* LaunchScreen.storyboard */; };
+		B93701392965D4E600542228 /* NasaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93701382965D4E600542228 /* NasaDataModel.swift */; };
+		B937013B2965D6BE00542228 /* ApiHandler .swift in Sources */ = {isa = PBXBuildFile; fileRef = B937013A2965D6BE00542228 /* ApiHandler .swift */; };
+		B937013D2965D77D00542228 /* NasaServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937013C2965D77D00542228 /* NasaServer.swift */; };
+		B93701412965DADD00542228 /* NasaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937013F2965DADD00542228 /* NasaTableViewCell.swift */; };
+		B93701422965DADD00542228 /* NasaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93701402965DADD00542228 /* NasaTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		B93701282965D46700542228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B937012B2965D46700542228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B937012D2965D46700542228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93701382965D4E600542228 /* NasaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDataModel.swift; sourceTree = "<group>"; };
+		B937013A2965D6BE00542228 /* ApiHandler .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiHandler .swift"; sourceTree = "<group>"; };
+		B937013C2965D77D00542228 /* NasaServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaServer.swift; sourceTree = "<group>"; };
+		B937013F2965DADD00542228 /* NasaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTableViewCell.swift; sourceTree = "<group>"; };
+		B93701402965DADD00542228 /* NasaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NasaTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,66 @@
 			children = (
 				B937011F2965D46400542228 /* AppDelegate.swift */,
 				B93701212965D46400542228 /* SceneDelegate.swift */,
-				B93701232965D46400542228 /* ViewController.swift */,
-				B93701252965D46400542228 /* Main.storyboard */,
+				B93701372965D4C100542228 /* View Controllers */,
+				B93701362965D4AF00542228 /* Views */,
+				B93701352965D49C00542228 /* Constants  */,
+				B93701342965D48A00542228 /* Model */,
+				B93701332965D47B00542228 /* Network  */,
 				B93701282965D46700542228 /* Assets.xcassets */,
-				B937012A2965D46700542228 /* LaunchScreen.storyboard */,
 				B937012D2965D46700542228 /* Info.plist */,
 			);
 			path = NasaFiles;
+			sourceTree = "<group>";
+		};
+		B93701332965D47B00542228 /* Network  */ = {
+			isa = PBXGroup;
+			children = (
+				B937013A2965D6BE00542228 /* ApiHandler .swift */,
+			);
+			path = "Network ";
+			sourceTree = "<group>";
+		};
+		B93701342965D48A00542228 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B93701382965D4E600542228 /* NasaDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B93701352965D49C00542228 /* Constants  */ = {
+			isa = PBXGroup;
+			children = (
+				B937013C2965D77D00542228 /* NasaServer.swift */,
+			);
+			path = "Constants ";
+			sourceTree = "<group>";
+		};
+		B93701362965D4AF00542228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B937013E2965DABE00542228 /* CustomCells */,
+				B93701252965D46400542228 /* Main.storyboard */,
+				B937012A2965D46700542228 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B93701372965D4C100542228 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B93701232965D46400542228 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B937013E2965DABE00542228 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				B937013F2965DADD00542228 /* NasaTableViewCell.swift */,
+				B93701402965DADD00542228 /* NasaTableViewCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B937012C2965D46700542228 /* LaunchScreen.storyboard in Resources */,
+				B93701422965DADD00542228 /* NasaTableViewCell.xib in Resources */,
 				B93701292965D46700542228 /* Assets.xcassets in Resources */,
 				B93701272965D46400542228 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93701392965D4E600542228 /* NasaDataModel.swift in Sources */,
+				B937013B2965D6BE00542228 /* ApiHandler .swift in Sources */,
 				B93701242965D46400542228 /* ViewController.swift in Sources */,
 				B93701202965D46400542228 /* AppDelegate.swift in Sources */,
 				B93701222965D46400542228 /* SceneDelegate.swift in Sources */,
+				B93701412965DADD00542228 /* NasaTableViewCell.swift in Sources */,
+				B937013D2965D77D00542228 /* NasaServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
